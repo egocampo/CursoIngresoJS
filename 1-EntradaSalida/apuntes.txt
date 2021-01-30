@@ -1,3 +1,3 @@
 document.getElementById("txtIdNombre").value; //Para tomar un valor de una caja de texto. Ejercicio 3
-//parsear: convertir cadena de caracteres a numero
-//castear: converir un tipo de dato numerico a otro tipo de dato numerico
+//"parsear": convertir cadena de caracteres a numero
+//"castear": converir un tipo de dato numerico a otro tipo de dato numerico
