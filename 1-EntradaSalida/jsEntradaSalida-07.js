@@ -25,7 +25,7 @@ function multiplicar()
 	let num1=parseInt(document.getElementById("txtIdNumeroUno").value);
 	let num2=parseInt(document.getElementById("txtIdNumeroDos").value);
 	let resultado=num1*num2;
-	alert("La multiplicación es" +resultado);	
+	alert("La multiplicación es " +resultado);	
 }
 
 function dividir()

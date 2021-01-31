@@ -6,7 +6,6 @@ function mostrar()
 	let nombre;
 	nombre = document.getElementById("txtIdNombre").value;  //"document" llama al documento que invoca a la funcion. getElementById busca el id, y con .value trabajo sobre el valor de dicha posición.
 	alert(nombre);
-
 }
 
 
