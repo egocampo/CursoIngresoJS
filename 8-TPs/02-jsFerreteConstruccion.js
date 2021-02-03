@@ -6,44 +6,71 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
-	let largo;
-	let ancho;
-	let perimetro;
-	let alambre;
+	// Declaración de variables
+	var largoString;
+	var anchoString;
+	var largoInt;
+	var anchoInt;
+	var perimetro;
+	var alambre;
 
-	largo=parseInt(document.getElementById('txtIdLargo').value);
-	ancho=parseInt(document.getElementById('txtIdAncho').value);
+	// Toma de datos de usuario
+	largoString=txtIdLargo.value;
+	anchoString=txtIdAncho.value;
 
-	perimetro=2*(largo+ancho);
+	// Parseo de datos
+	largoInt=parseInt(largoString);
+	anchoInt=parseInt(anchoString);
+
+	// Realizo los cálculos
+	perimetro=2*(largoInt+anchoInt);
 	alambre=3*perimetro;
 
+	// Muestro el resultado
 	alert(`Se necesitan ${alambre.toFixed(2)} metros de alambre`)
 }
+
 function Circulo () 
 {
-	let radio;
-	let perimetro;
-	let alambre;
+	// Declaración de variables
+	var radioString;
+	var radioInt;
+	var perimetro;
+	var alambre;
 
-	radio=parseInt(document.getElementById('txtIdRadio').value);
+	// Captura de datos
+	radioString=txtIdRadio.value;
 
-	perimetro=2*Math.PI*radio;
+	// Parseo de datos
+	radioInt=parseInt(radioString);
+
+	// Calculos
+	perimetro=2*Math.PI*radioInt;
 	alambre=3*perimetro;
 
 	alert(`Se necesitan ${alambre.toFixed(2)} metros de alambre`)
 }
+
 function Materiales () 
 {
-	let largo;
-	let ancho;
-	let area;
-	let cemento;
-	let cal;
+	// Declaración de variables
+	var largoString;
+	var anchoString;
+	var largoInt;
+	var anchoInt;
+	var area;
+	var cemento;
+	var cal;
 
-	largo=parseInt(document.getElementById('txtIdLargo').value);
-	ancho=parseInt(document.getElementById('txtIdAncho').value);
+	// Toma de datos de usuario
+	largoString=txtIdLargo.value;
+	anchoString=txtIdAncho.value;
 
-	area=largo*ancho;
+	// Parseo de datos
+	largoInt=parseInt(largoString);
+	anchoInt=parseInt(anchoString);
+
+	area=largoInt*anchoInt;
 	cemento=area*2;
 	cal=area*3;
 
