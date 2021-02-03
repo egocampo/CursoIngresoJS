@@ -5,46 +5,64 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	let precio1;
-	let precio2;
-	let precio3;
+	let precioUnoString;
+	let precioDosString;
+	let precioTresString;
+	let precioUnoInt;
+	let precioDosInt;
+	let precioTresInt;
 	let suma;
 
-	precio1=parseFloat(document.getElementById('txtIdPrecioUno').value);
-	precio2=parseFloat(document.getElementById('txtIdPrecioDos').value);
-	precio3=parseFloat(document.getElementById('txtIdPrecioTres').value);
+	precioUnoString=txtIdPrecioUno.value;
+	precioDosString=txtIdPrecioDos.value;
+	precioTresString=txtIdPrecioTres.value;
+	precioUnoInt=parseInt(precioUnoString);
+	precioDosInt=parseInt(precioDosString);
+	precioTresInt=parseInt(precioTresString);
 
-	suma=precio1+precio2+precio3;
+	suma=precioUnoInt+precioDosInt+precioTresInt;
 
-	alert(suma.toFixed(2));
+	alert(suma);
 }
 function Promedio () 
 {
-	let precio1;
-	let precio2;
-	let precio3;
+	let precioUnoString;
+	let precioDosString;
+	let precioTresString;
+	let precioUnoInt;
+	let precioDosInt;
+	let precioTresInt;
 	let promedio;
 
-	precio1=parseFloat(document.getElementById('txtIdPrecioUno').value);
-	precio2=parseFloat(document.getElementById('txtIdPrecioDos').value);
-	precio3=parseFloat(document.getElementById('txtIdPrecioTres').value);
+	precioUnoString=txtIdPrecioUno.value;
+	precioDosString=txtIdPrecioDos.value;
+	precioTresString=txtIdPrecioTres.value;
+	precioUnoInt=parseInt(precioUnoString);
+	precioDosInt=parseInt(precioDosString);
+	precioTresInt=parseInt(precioTresString);
 
-	promedio=(precio1+precio2+precio3)/3;
+	promedio=(precioUnoInt+precioDosInt+precioTresInt)/3;
 
-	alert(promedio.toFixed(2));	
+	alert(promedio);
 }
 function PrecioFinal () 
 {
-	let precio1;
-	let precio2;
-	let precio3;
+	let precioUnoString;
+	let precioDosString;
+	let precioTresString;
+	let precioUnoInt;
+	let precioDosInt;
+	let precioTresInt;
 	let precioFinal;
 
-	precio1=parseFloat(document.getElementById('txtIdPrecioUno').value);
-	precio2=parseFloat(document.getElementById('txtIdPrecioDos').value);
-	precio3=parseFloat(document.getElementById('txtIdPrecioTres').value);
+	precioUnoString=txtIdPrecioUno.value;
+	precioDosString=txtIdPrecioDos.value;
+	precioTresString=txtIdPrecioTres.value;
+	precioUnoInt=parseInt(precioUnoString);
+	precioDosInt=parseInt(precioDosString);
+	precioTresInt=parseInt(precioTresString);
 
-	precioFinal=1.21*(precio1+precio2+precio3);
+	precioFinal=1.21*(precioUnoInt+precioDosInt+precioTresInt);
 
-	alert(precioFinal.toFixed(2));
+	alert(precioFinal);
 }

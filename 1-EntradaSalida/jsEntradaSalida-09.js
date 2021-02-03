@@ -5,17 +5,17 @@ mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
-	let sueldo;
+	let sueldoString;
+	let sueldoInt;
 	let sueldoConAumento;
 
 	// Capturo el sueldo desde el cuadro txtIdSueldo
-	sueldo=parseFloat(document.getElementById('txtIdSueldo').value);
+	sueldoString=txtIdSueldo.value;
+	sueldoInt=parseInt(sueldoString);
 
 	// Calculo el sueldo con aumento del 10%
-	sueldoConAumento = sueldo * 1.1;
+	sueldoConAumento = sueldoInt * 1.1;
 
 	// Muestro el sueldo con aumento, redondeado con toFixed a dos decimales, en el cuadro txtIdResultado
-	document.getElementById('txtIdResultado').value=sueldoConAumento.toFixed(2);
-
-
+	txtIdResultado.value=sueldoConAumento.toFixed(2);
 }

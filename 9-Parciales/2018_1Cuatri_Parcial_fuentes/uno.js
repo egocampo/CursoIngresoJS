@@ -1,14 +1,18 @@
 
 function mostrar()
 {
-	let ancho;
-	let largo;
+	let anchoString;
+	let largoString;
+	let anchoInt;
+	let largoInt;
 	let perimetro;
 
-	ancho=parseInt(prompt("Ingrese el ancho del rectángulo"));
-	largo=parseInt(prompt("Ingrese el largo del rectángulo"));
+	anchoString=prompt("Ingrese el ancho del rectángulo");
+	largoString=prompt("Ingrese el largo del rectángulo");
+	anchoInt=parseInt(anchoString);
+	largoInt=parseInt(largoString);
 
-	perimetro = 2*(ancho+largo);
+	perimetro = 2*(anchoInt+largoInt);
 
 	alert(perimetro);
 }
