@@ -1,10 +1,17 @@
 function mostrar()
 {
-	let edad;
+	// Declaro las variables
+	var edadString;
+	var edadInt;
 
-	edad = parseInt(document.getElementById('txtIdEdad').value);
+	// Pido y capturo la edad ingresada por el usuario
+	edadString = txtIdEdad.value;
 
-	if(edad>=18){
+	// Parseo la edad
+	edadInt=parseInt(edadString);
+
+	// Planteo la condición
+	if(edadInt>=18){
 		alert("La persona es mayor de edad");
 	}
 }

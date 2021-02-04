@@ -1,11 +1,17 @@
 function mostrar()
 {
-	let edad;
+	// Declaro las variables
+	var edadString;
+	var edadInt;
 
-	//tomo la edad  
-	edad=parseInt(document.getElementById('txtIdEdad').value);
+	// Pido y capturo el dato edad ingresado por el usuario
+	edadString=txtIdEdad.value;
 
-	if(edad==15){
+	// Parseo la edad
+	edadInt=parseInt(edadString);
+
+	// Resuelvo el condicional
+	if(edadInt==15){
 		alert("Niña bonita");
 	}
 }

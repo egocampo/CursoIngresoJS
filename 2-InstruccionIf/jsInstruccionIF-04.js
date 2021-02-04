@@ -1,10 +1,17 @@
 function mostrar()
 {
-	let edad;
+	// Declaro las variables
+	var edadString;
+	var edadInt;
 
-	edad = parseInt(document.getElementById('txtIdEdad').value);
+	// Capturo la edad desde la caja de texto por id
+	edadString=txtIdEdad.value;
 
-	if(edad>=13 && edad<=17){
+	// Parseo la edad
+	edadInt=parseInt(edadString);
+
+	// Realizo el condicional
+	if(edadInt>=13 && edadInt<=17){
 		alert("La persona es adolescente");
 	}
 }
