@@ -10,5 +10,82 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+ 	// Defino variables
+ 	var cantidadLamparas;
+ 	var marcaLamparas;
+ 	var precioLamparasPorUnidad;
+ 	var precioSinDescuento;
+ 	var precioConDescuento;
+ 	var porcentajeIngresosBrutos;
+ 	var precioBaseIngresosBrutos;
+ 	var precioFinal;
+
+ 	// Asigno valores fijos.
+ 	precioLamparasPorUnidad=35;
+ 	porcentajeIngresosBrutos=10;
+ 	precioBaseIngresosBrutos=120;
+
+ 	// Tomo datos
+ 	cantidadLamparas=document.getElementById('txtIdCantidad').value;
+ 	marcaLamparas=document.getElementById('Marca').value;
+
+ 	// Parseo datos
+ 	cantidadLamparas=parseInt(cantidadLamparas);
+
+ 	// Calculo el precio sin descuento
+ 	precioSinDescuento=cantidadLamparas*precioLamparasPorUnidad;
+
+ 	// Planteo el condicional principal
+ 	if(cantidadLamparas>=6)
+ 	{
+ 		precioConDescuento=precioSinDescuento-(precioSinDescuento*50/100);
+ 	}
+ 	else if(cantidadLamparas==5)
+ 	{
+ 		if(marcaLamparas=="ArgentinaLuz")0
+ 		{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*40/100);
+ 		}
+ 		else
+ 		{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*30/100);
+ 		}
+ 	}
+ 	else if(cantidadLamparas==4)
+ 	{
+ 		if(marcaLamparas=="ArgentinaLuz" || marcaLamparas=="FelipeLamparas")
+ 		{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*25/100);
+ 		}
+ 		else{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*20/100);
+ 		}
+ 	}
+  	else if(cantidadLamparas==3)
+ 	{
+ 		if(marcaLamparas=="ArgentinaLuz")
+ 		{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*15/100);
+ 		}
+ 		else if(marcaLamparas=="FelipeLamparas")
+ 		{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*10/100);
+ 		}
+ 		else{
+ 			precioConDescuento=precioSinDescuento-(precioSinDescuento*5/100);
+ 		}
+ 	}
  	
+ 	// Calculo si pasa el valor de piso de IIBB y le sumo el porcentaje
+ 	if(precioConDescuento>precioBaseIngresosBrutos)
+ 	{
+ 		precioFinal=precioConDescuento+(precioConDescuento*porcentajeIngresosBrutos/100);
+ 	}
+ 	else
+ 	{
+ 		precioFinal=precioConDescuento;
+ 	}
+
+ 	// Devuelvo el precio final
+ 	document.getElementById('txtIdprecioDescuento').value=precioFinal;
 }

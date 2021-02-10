@@ -12,9 +12,13 @@ function mostrar()
 	edadInt=parseInt(edadString);
 
 	// Planteo el condicional
-	if(edadInt<18 && estadoCivil != "Soltero"){
+	/*if(edadInt<18 && estadoCivil != "Soltero"){
 	}
 	else if(edadInt>=18 && estadoCivil=="Soltero"){
+		alert("Es soltero y no es menor");
+	}
+	*/
+	if(edadInt>=18 && estadoCivil=="Soltero"){
 		alert("Es soltero y no es menor");
 	}
 }

@@ -1,22 +1,34 @@
-/*
-Debemos lograr tomar Los numeros por ID ,
-transformarlos a enteros (parseInt),realizar la operación correcta y 
-mostrar el resto entre el dividendo y el divisor.
-ej.: "El resto es 0 ."*/
+// Alumno: Gabriel Ocampo
+// Division: 1°G
+
+//***************
+//**Ejercicio 3**
+//***************
+
 function SacarResto()
 {
-	let dividendoString;
-	let divisorString;
-	let divisorInt;
-	let dividendoInt;
-	let resto;
+	// Declaracion de variables
+	var numeroUno;
+	var numeroDos;
+	var suma;
+	var promedio;
+	var modulo;
 
-	dividendoString=txtIdNumeroDividendo.value;
-	divisorString=txtIdNumeroDivisor.value;
-	dividendoInt=parseInt(dividendoString);
-	divisorInt=parseInt(divisorString);
+	// Captura de datos
+	numeroUno=document.getElementById("txtIdNumeroDividendo").value;
+	numeroDos=document.getElementById("txtIdNumeroDivisor").value;
 
-	resto = dividendoInt % divisorInt;
+	// Parseo de numeros
+	numeroUno=parseInt(numeroUno);
+	numeroDos=parseInt(numeroDos);
 
-	alert(`El resto entre ${dividendoInt} y ${divisorInt} es ${resto}`)
+	// Calculos
+	suma=numeroUno+numeroDos;
+	promedio=suma/2
+	modulo=numeroUno%numeroDos;
+
+	// Muestro los resultados
+	console.log("La suma es "+suma);
+	console.log("El promedio es "+promedio);
+	console.log("El módulo es "+modulo);
 }
