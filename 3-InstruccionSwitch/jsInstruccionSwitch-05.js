@@ -1,27 +1,13 @@
 function mostrar()
 {
-	// Declaro variable
-	var horaDelDia;
-
-	// Capturo la hora
-	horaDelDia = document.getElementById('txtIdHora').value;
-
-	// Parseo la hora
-	horaDelDia=parseInt(horaDelDia);
-	
+	var horaDelDia; // Declaro variable
+	horaDelDia=document.getElementById('txtIdHora').value; // Capturo la hora
+	horaDelDia=parseInt(horaDelDia); // Parseo la hora
 	switch(horaDelDia){
 		case 7:
-			alert("Es de mañana");
-			break;
 		case 8:
-			alert("Es de mañana");
-			break;
 		case 9:
-			alert("Es de mañana");
-			break;
-		case 10:
-			alert("Es de mañana");
-			break;
+		case 10:;
 		case 11:
 			alert("Es de mañana");
 			break;
