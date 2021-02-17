@@ -3,6 +3,23 @@ function mostrar()
 	var horaDelDia;	// Declaro variables
 	horaDelDia=document.getElementById('txtIdHora').value;	// Capturo la hora
 	horaDelDia=parseInt(horaDelDia);	// Parseo la hora
+	var mensaje;
+	
+	if(horaDelDia>=7 && horaDelDia<=11){
+		mensaje="Es de mañana";
+	}
+	else if(horaDelDia>=12 && horaDelDia<=19){
+		mensaje="Es de tarde";
+	}
+	else if((horaDelDia>=20 && horaDelDia<=24) || (horaDelDia>=0 && horaDelDia<=6)){
+		mensaje="Es de noche";
+	}
+	else{
+		mensaje="la hora no existe";
+	}
+
+	alert(mensaje);
+/*
 	switch(horaDelDia){
 		case 7:
 		case 8:
@@ -39,4 +56,5 @@ function mostrar()
 			alert("la hora no existe.");
 			break;
 	}
+*/
 }//FIN DE LA FUNCIÓN
