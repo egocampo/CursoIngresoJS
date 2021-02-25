@@ -1,28 +1,23 @@
+/*Enunciado: al presionar el botón se pedira, a traves de prompt, y numeros que seran guardados en un vector y luego seran mostrados mediante
+document.write(). mostrar ademas la sumatoria de todos los numeros.*/
 function mostrar()
 {
-
-	var miArray = new Array();
-	var acum=0;
-	for (var i = 0; i <5; i++)
+	var arrayNumeros=[];
+	var continuar;
+	var acumulador=0;
+	for(var i=0;;i++)
 	{
-		miArray[i]=parseInt(prompt("Ingrese un numero"));
-		acum+=miArray[i];
-
+		arrayNumeros.push(parseInt(prompt("Ingrese un número")));
+		acumulador+=arrayNumeros[i];
+		continuar=confirm("¿Desea continuar?");
+		if(!(continuar))
+		{
+			break;
+		}
 	}
-
-
-
-	for(var i=0; i<5; i++)
+	for(var i=0;i<arrayNumeros.length;i++)
 	{
-
-		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
-
-
+		document.write(arrayNumeros[i]+"<BR>");
 	}
-
-	document.write("<h1> La suma de todos los numeros es: "+acum+"</h1>")
-
-
-
-
+	document.write("La suma de los números es: "+acumulador);
 }//FIN DE LA FUNCIÓN

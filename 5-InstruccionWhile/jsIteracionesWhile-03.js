@@ -1,9 +1,9 @@
-/*
-al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
+/*Enunciado: al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
-	var claveIngresada="";
+	var claveIngresada;
+	claveIngresada=prompt("Ingrese la clave");
 	while(claveIngresada!="utn750"){
-		claveIngresada = prompt("ingrese la contraseña.");
+		claveIngresada=prompt("Clave errónea. Ingrese la clave");
 	}
-}//FIN DE LA FUNCIÓN
+}

@@ -1,9 +1,11 @@
+/*Enunciado: al presionar el botón pedir la cantidad de veces que quiero repetir el mensaje "Hola UTN FRA"*/
 function mostrar()
 {
-	var cantidadIteraciones;
-	cantidadIteraciones=prompt("¿Cuántas veces se mostará el mensaje?");
-	cantidadIteraciones=parseInt(cantidadIteraciones);
-	for(var i=0;i<cantidadIteraciones;i++){
-		alert("Hola UTN FRA");
+	var cantidadRepeticiones;
+	cantidadRepeticiones=prompt("Ingrese la cantidad de repeticiones");
+	cantidadRepeticiones=parseInt(cantidadRepeticiones);
+	for(var i=1;i<=cantidadRepeticiones;i++)
+	{
+		document.write(i+") Hola UTN FRA<BR>");
 	}
 }//FIN DE LA FUNCIÓN

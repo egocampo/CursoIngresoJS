@@ -1,23 +1,21 @@
+/*Enunciado: al presionar el botón se pedira, a traves de prompt, numeros que seran guardados en un vector
+y luego serán mostrados mediante document.write().*/
 function mostrar()
 {
-
-	var miArray = new Array();
-
-	for (var i = 0; i <5; i++)
+	var arrayNumeros=[];
+	var continuar;
+	for(var i=0;;i++)
 	{
-		miArray[i]=parseInt(prompt("Ingrese un numero"));
+		arrayNumeros.push(parseInt(prompt("Ingrese un número")));
+		continuar=confirm("¿Desea continuar?");
+		if(!(continuar))
+		{
+			break;
+		}
 	}
-
-
-
-	for(var i=0; i<5; i++)
+	for(var i=0;i<arrayNumeros.length;i++)
 	{
-
-		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
+		console.log(arrayNumeros[i]);
 	}
-
-
-
-
-
 }//FIN DE LA FUNCIÓN
+		
